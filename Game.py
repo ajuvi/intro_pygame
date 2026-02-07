@@ -5,17 +5,20 @@ import random
 import Globals
 
 def main():
+
+    # objectes del joc
     pantalla=Pantalla()
     nau=Nau(Globals.SCREEN_WIDTH/2,Globals.SCREEN_HEIGHT/2,50,50,(255,0,0))
     
 
-    #bucle principal del joc
+    # bucle principal del joc
     while(pantalla.running):
         if pantalla.running:
             teclat = pantalla.llegir_teclat()   
             logica(teclat,pantalla,nau)
             render(pantalla,nau)
 
+# teclau i logica del joc
 def logica(teclat,pantalla,nau):
 
     if teclat[pygame.K_q] or teclat[pygame.K_ESCAPE]:
@@ -43,9 +46,10 @@ def logica(teclat,pantalla,nau):
 
     nau.update()    
 
-def render(pantalla, avatar):
+# render del joc
+def render(pantalla, nau):
     pantalla.netejar()
-    avatar.pintar(pantalla)
+    nau.draw(pantalla)
     pantalla.render()
 
 if __name__ == "__main__":

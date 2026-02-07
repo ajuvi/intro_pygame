@@ -20,10 +20,10 @@ class Nau(GameObject):
         self.x=x
         self.y=y
 
-    def pintar(self,pantalla):
+    def draw(self,pantalla):
         pantalla.pintar_rectangle(self.x,self.y,self.width,self.height,self.color) 
 
-    def colissio(self,avatar2):
+    def colissio(self,other):
         pass
 
     def __str__(self):

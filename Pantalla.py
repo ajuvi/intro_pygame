@@ -7,10 +7,12 @@ import Globals
 
 class Pantalla:
 
-    def __init__(self):
+    def __init__(self, width=Globals.SCREEN_WIDTH, height=Globals.SCREEN_HEIGHT, fullscreen=Globals.FULLSCREEN):
 
-        #self.FLAGS=pygame.FULLSCREEN | pygame.HWSURFACE | pygame.DOUBLEBUF
         self.FLAGS= pygame.HWSURFACE | pygame.DOUBLEBUF   
+        
+        if fullscreen:
+            self.FLAGS=pygame.FULLSCREEN | pygame.HWSURFACE | pygame.DOUBLEBUF
 
         pygame.init()
         self.running = True

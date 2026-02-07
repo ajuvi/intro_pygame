@@ -7,10 +7,10 @@ class GameObject:
         self.height = height
         self.color=color
 
-    def Update():
+    def update():
         pass
 
-    def Draw(self, pantalla):
+    def draw(self, pantalla):
         pass
 
     def __str__(self):
